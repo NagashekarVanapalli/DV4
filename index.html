@@ -38,7 +38,7 @@
 
 <main>
     <div class="caption">
-        US Election by County.
+        US income by state.
     </div>
     <div class="control">
         <button name="change" id="btnSwitch" class="btn btn-success" style="width: 200px">Choropleth</button>
@@ -56,7 +56,7 @@
         let census_data = "https://raw.githubusercontent.com/NagashekarVanapalli/DV4/main/data/income_states.csv";
         let geoJson = "https://raw.githubusercontent.com/NagashekarVanapalli/DV4/main/data/DV_assgn4.json";
         //const NormalTopoJSON = "data/us_counties_topo.json"
-        const NormalTopoJSON = "https://raw.githubusercontent.com/NagashekarVanapalli/DV4/main/data/DV_assgn4_topo.json"
+        const NormalTopoJSON = "https://raw.githubusercontent.com/NagashekarVanapalli/DV4/main/data/states_choro.geojson"
         // Step 1: Load the datasets
         Promise.all(
             [
