@@ -53,12 +53,10 @@
         let dem_color= "#0015BC";
         // load the data sources:
         // source 1
-        let census_data = "https://github.com/NagashekarVanapalli/DV4/blob/main/data/income_states.csv"
-        // source 2: US Census Counties geojson
-        let geoJson = "https://github.com/NagashekarVanapalli/DV4/blob/main/data/DV_assgn4.json";
-        //
+        let census_data = "https://raw.githubusercontent.com/NagashekarVanapalli/DV4/main/data/income_states.csv";
+        let geoJson = "https://raw.githubusercontent.com/NagashekarVanapalli/DV4/main/data/DV_assgn4.json";
         //const NormalTopoJSON = "data/us_counties_topo.json"
-        const NormalTopoJSON = "https://github.com/NagashekarVanapalli/DV4/blob/main/data/DV_assgn4_topo.json"
+        const NormalTopoJSON = "https://raw.githubusercontent.com/NagashekarVanapalli/DV4/main/data/DV_assgn4_topo.json"
         // Step 1: Load the datasets
         Promise.all(
             [
