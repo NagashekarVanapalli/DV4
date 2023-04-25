@@ -97,7 +97,7 @@
 
             // Step 6:
             // Group the data by the county_fips key
-            let income_data = d3.group(data[1],d=>d.county_fips);
+            let income_data = d3.group(data[1],d=>d.INCOME);
 
             // step 7
             // generate the map, by adding path to the svg, and color code by the winning party in each county
@@ -109,7 +109,7 @@
                     .attr("d",d=>geo_generator(d))
                     .attr("fill",d=>{
                             try{
-                                const {per_dem,per_gop} =  income_data.get(d.properties.GEOID)[0]
+                                const {per_dem,per_gop} =  income_data.get(d.properties.NAME)[0]
                                 return per_dem>per_gop?dem_color: gop_color;
                             }
                             catch (e){
@@ -118,7 +118,7 @@
                             })
                     .attr("fill-opacity", d=> {
                         try{
-                            const {per_dem,per_gop} =  income_data.get(d.properties.GEOID)[0]
+                            const {per_dem,per_gop} =  income_data.get(d.properties.NAME)[0]
                             return per_dem>per_gop?per_dem:per_gop
                         }
                         catch (e){
